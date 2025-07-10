@@ -1,15 +1,15 @@
 {
-  "Name": "azure-core-amqp",
-  "Version": "2.11.0-alpha.20250710.1",
-  "DevVersion": "2.11.0-alpha.20250710.1",
-  "DirectoryPath": "sdk/core/azure-core-amqp",
+  "Name": "azure-core",
+  "Version": "1.56.0-alpha.20250710.1",
+  "DevVersion": "1.56.0-alpha.20250710.1",
+  "DirectoryPath": "sdk/core/azure-core",
   "ServiceDirectory": "core",
-  "ReadMePath": "sdk/core/azure-core-amqp/README.md",
-  "ChangeLogPath": "sdk/core/azure-core-amqp/CHANGELOG.md",
+  "ReadMePath": "sdk/core/azure-core/README.md",
+  "ChangeLogPath": "sdk/core/azure-core/CHANGELOG.md",
   "Group": "com.azure",
   "SdkType": "client",
   "IsNewSdk": true,
-  "ArtifactName": "azure-core-amqp",
+  "ArtifactName": "azure-core",
   "ReleaseStatus": "Unreleased",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
@@ -18,10 +18,12 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "name": "azure-core-amqp",
-    "safeName": "azurecoreamqp",
-    "releaseInBatch": "${{ parameters.release_azurecoreamqp }}",
+    "name": "azure-core",
+    "safeName": "azurecore",
+    "releaseInBatch": "${{ parameters.release_azurecore }}",
     "triggeringPaths": [
+      "/sdk/parents/azure-sdk-parent",
+      "/sdk/parents/azure-client-sdk-parent",
       "/sdk/core/ci.yml"
     ],
     "groupId": "com.azure"
@@ -52,10 +54,23 @@
     ]
   },
   "Namespaces": [
-    "com.azure.core.amqp",
-    "com.azure.core.amqp.client.traits",
-    "com.azure.core.amqp.exception",
-    "com.azure.core.amqp.models"
-  ],
-  "//comment": "Pinned to version 2.9.0-beta.1 until a build issue is resolved"
+    "com.azure.core.annotation",
+    "com.azure.core.client.traits",
+    "com.azure.core.credential",
+    "com.azure.core.cryptography",
+    "com.azure.core.exception",
+    "com.azure.core.http",
+    "com.azure.core.http.policy",
+    "com.azure.core.http.rest",
+    "com.azure.core.models",
+    "com.azure.core.util",
+    "com.azure.core.util.builder",
+    "com.azure.core.util.io",
+    "com.azure.core.util.logging",
+    "com.azure.core.util.metrics",
+    "com.azure.core.util.paging",
+    "com.azure.core.util.polling",
+    "com.azure.core.util.serializer",
+    "com.azure.core.util.tracing"
+  ]
 }
